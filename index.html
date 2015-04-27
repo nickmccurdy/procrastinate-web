@@ -1,4 +1,55 @@
-<head>
-  <title>Procrastinate</title>
-  <script src="dist/bundle.js"></script>
-</head>
+<!DOCTYPE html>
+<html lang="en" ng-app="ProcrastinateApp" ng-controller="ProcrastinateController">
+  <head>
+    <title>Procrastinate</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular.min.js"></script>
+    <script src="dist/bundle.js"></script>
+  </head>
+
+  <body class="container">
+    <div class="page-header">
+      <h1>
+        Procrastinate
+        <small>Quickly create pending specs for your favorite test frameworks.</small>
+      </h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Input</h2>
+
+        <form>
+          <div class="form-group">
+            <label for="input-formatter">Formatter</label>
+            <select id="input-formatter" class="form-control" ng-model="formatter" ng-options="formatter for formatter in procrastinate.formatters"></select>
+          </div>
+
+          <div class="form-group">
+            <label for="input-text">Text</label>
+            <textarea id="input-text" class="form-control monospace" rows="20" ng-model="input"></textarea>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Output</h2>
+
+        <form>
+          <div class="form-group">
+            <label for="output-formatter">Formatter</label>
+            <input id="output-formatter" class="form-control" readonly ng-bind="formatter">
+          </div>
+
+          <div class="form-group">
+            <label for="output-text">Text</label>
+            <textarea id="output-text" class="form-control monospace" rows="20" readonly ng-bind="formatter && input && procrastinate(formatter, input)"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
