@@ -1,0 +1,10 @@
+{
+  "private": "true",
+  "scripts": {
+    "install": "browserify script.js --outfile dist/bundle.js"
+  },
+  "dependencies": {
+    "browserify": "^9.0.8",
+    "procrastinate": "^1.1.0"
+  }
+}
