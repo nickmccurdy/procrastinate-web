@@ -4,6 +4,7 @@
     <title>Procrastinate</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material.min.css">
     <link rel="stylesheet" href="style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular.min.js"></script>
@@ -20,9 +21,9 @@
 
     <div class="row">
       <div class="col-md-6">
-        <h2>Input</h2>
+        <form class="well">
+          <legend>Input</legend>
 
-        <form>
           <div class="form-group">
             <label for="input-formatter">Formatter</label>
             <select id="input-formatter" class="form-control" ng-model="formatter" ng-options="formatter for formatter in procrastinate.formatters"></select>
@@ -36,9 +37,9 @@
       </div>
 
       <div class="col-md-6">
-        <h2>Output</h2>
+        <form class="well">
+          <legend>Output</legend>
 
-        <form>
           <div class="form-group">
             <label for="output-formatter">Formatter</label>
             <input id="output-formatter" class="form-control" readonly ng-bind="formatter">
