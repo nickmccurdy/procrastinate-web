@@ -1,9 +1,11 @@
 {
   "private": "true",
   "scripts": {
-    "install": "browserify script.js --outfile dist/bundle.js"
+    "prepublish": "bower install && npm run-script browserify",
+    "browserify": "browserify script.js --outfile dist/bundle.js"
   },
   "dependencies": {
+    "bower": "^1.4.1",
     "browserify": "^9.0.8",
     "procrastinate": "^1.1.0"
   }
