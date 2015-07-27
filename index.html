@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
+    <script src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-ace/ui-ace.min.js"></script>
     <script src="dist/bundle.js"></script>
   </head>
 
@@ -30,7 +32,7 @@
 
           <div class="form-group">
             <label for="input-text">Text</label>
-            <textarea id="input-text" class="form-control monospace" rows="20" ng-model="input"></textarea>
+            <div ui-ace id="input-text" ng-model="input"></div>
           </div>
         </form>
       </div>
@@ -46,7 +48,7 @@
 
           <div class="form-group">
             <label for="output-text">Text</label>
-            <textarea id="output-text" class="form-control monospace" rows="20" readonly ng-bind="formatter && input && procrastinate(formatter, input)"></textarea>
+            <div ui-ace id="output-text" ng-model="output"></div>
           </div>
         </form>
       </div>
