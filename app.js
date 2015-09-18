@@ -4,5 +4,5 @@ var koa = require('koa');
 var app = koa();
 
 app.use(logger());
-app.use(serve('.'));
+app.use(serve('public'));
 app.listen(3000);
