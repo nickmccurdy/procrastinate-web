@@ -1,0 +1,10 @@
+{
+  "name": "procrastinate-web",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-ui-ace": "bower",
+    "bootstrap": "~3.3.5",
+    "bootstrap-material-design": "~0.3.0"
+  }
+}
